@@ -1,2 +1,0 @@
-- prog ( loop ) input : texte utilisateur, output : réponse
--> text utilisateur -> oracle -> émotion(s) + confiance -> structure de données générique pour capturer une nouvelle logique simplement
