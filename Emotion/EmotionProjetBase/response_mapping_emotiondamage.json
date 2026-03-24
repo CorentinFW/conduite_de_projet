@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "confidence_levels": ["low", "medium", "high"],
+  "confidence_thresholds": {
+    "low_lt": 0.4,
+    "medium_lt": 0.7
+  },
+  "responses": {
+    "joy": {
+      "low": "Could you please clarify how you're feeling?",
+      "medium": "Thank you for sharing. Let's continue our conversation.",
+      "high": "Thank you for sharing. Let's continue our conversation."
+    },
+    "sadness": {
+      "low": "Could you please clarify how you're feeling?",
+      "medium": "I'm here to support you. Is there anything I can do to help?",
+      "high": "I'm here to support you. Is there anything I can do to help?"
+    },
+    "anger": {
+      "low": "Could you please clarify how you're feeling?",
+      "medium": "I sense that you might be feeling overwhelmed. Let's take a moment to pause.",
+      "high": "Let's pause and try to calm down, lower the tension."
+    },
+    "fear": {
+      "low": "Could you please clarify how you're feeling?",
+      "medium": "I sense that you might be feeling overwhelmed. Let's take a moment to pause.",
+      "high": "I'm here to support you. Is there anything I can do to help?"
+    },
+    "disgust": {
+      "low": "Could you please clarify how you're feeling?",
+      "medium": "I sense that you might be feeling overwhelmed. Let's take a moment to pause.",
+      "high": "Let's pause and try to calm down, lower the tension."
+    },
+    "surprise": {
+      "low": "Could you please clarify how you're feeling?",
+      "medium": "Thank you for sharing. Let's continue our conversation.",
+      "high": "Thank you for sharing. Let's continue our conversation."
+    },
+    "unknown": {
+      "low": "Could you please clarify how you're feeling?",
+      "medium": "Could you please clarify how you're feeling?",
+      "high": "Could you please clarify how you're feeling?"
+    }
+  },
+  "defaults": {
+    "emotion_id": "unknown",
+    "confidence_level": "medium",
+    "empty_input_response": "Could you please clarify how you're feeling?"
+  }
+}

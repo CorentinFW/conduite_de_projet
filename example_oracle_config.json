@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "emotions": [
+    {
+      "id": "joy",
+      "label": "joie",
+      "aliases": ["heureux", "content", "ravi"],
+      "keywords": ["génial", "super", "excellent", "top"],
+      "negations": ["pas", "jamais", "aucun", "ne"],
+      "weight": 1.0
+    },
+    {
+      "id": "gratitude",
+      "label": "gratitude",
+      "aliases": ["reconnaissant", "merci"],
+      "keywords": ["merci", "remercie", "gratitude", "apprécie"],
+      "negations": ["pas", "jamais", "aucun", "ne"],
+      "weight": 1.1
+    },
+    {
+      "id": "anxiety",
+      "label": "anxiété",
+      "aliases": ["angoissé", "stressé", "inquiet"],
+      "keywords": ["stress", "anxieux", "peur", "pression"],
+      "negations": ["pas", "jamais", "aucun", "ne"],
+      "weight": 1.0
+    },
+    {
+      "id": "frustration",
+      "label": "frustration",
+      "aliases": ["agacé", "énervé"],
+      "keywords": ["bloqué", "impossible", "ras-le-bol", "fatigué"],
+      "negations": ["pas", "jamais", "aucun", "ne"],
+      "weight": 1.05
+    },
+    {
+      "id": "sadness",
+      "label": "tristesse",
+      "aliases": ["triste", "abattu"],
+      "keywords": ["déçu", "déprime", "vide", "mal"],
+      "negations": ["pas", "jamais", "aucun", "ne"],
+      "weight": 1.0
+    }
+  ],
+  "confidence": {
+    "scale": "0_1",
+    "min": 0.0,
+    "max": 1.0,
+    "calibration": {
+      "base": 0.2,
+      "per_keyword_hit": 0.16,
+      "per_alias_hit": 0.2,
+      "ambiguity_penalty": 0.22,
+      "negation_penalty": 0.3,
+      "max_emotions": 3
+    }
+  },
+  "behavior": {
+    "allow_multiple_emotions": true,
+    "unknown_emotion_id": "unknown",
+    "language_hint": "auto"
+  }
+}
