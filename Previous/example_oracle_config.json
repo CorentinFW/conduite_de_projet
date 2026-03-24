@@ -50,6 +50,8 @@
       "base": 0.2,
       "per_keyword_hit": 0.16,
       "per_alias_hit": 0.2,
+      "per_intensifier_hit": 0.08,
+      "intensifiers": ["really", "very", "so", "extremely"],
       "ambiguity_penalty": 0.22,
       "negation_penalty": 0.3,
       "max_emotions": 3

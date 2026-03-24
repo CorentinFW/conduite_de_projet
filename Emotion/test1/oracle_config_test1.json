@@ -4,23 +4,23 @@
     {
       "id": "joy",
       "label": "joy",
-      "aliases": ["happy", "glad", "pleased", "delighted"],
-      "keywords": ["great", "awesome", "excellent", "super"],
+      "aliases": ["happy", "glad", "delighted"],
+      "keywords": ["great", "awesome", "excellent", "good"],
       "negations": ["not", "never", "no"],
       "weight": 1.0
     },
     {
       "id": "sadness",
       "label": "sadness",
-      "aliases": ["sad", "down", "upset"],
-      "keywords": ["depressed", "empty", "hurt", "disappointed"],
+      "aliases": ["sad", "down", "blue"],
+      "keywords": ["hurt", "empty", "disappointed", "alone"],
       "negations": ["not", "never", "no"],
       "weight": 1.0
     },
     {
       "id": "anger",
       "label": "anger",
-      "aliases": ["angry", "mad", "furious", "irritated"],
+      "aliases": ["angry", "mad", "furious"],
       "keywords": ["annoyed", "rage", "frustrated", "fed up"],
       "negations": ["not", "never", "no"],
       "weight": 1.05
@@ -28,26 +28,18 @@
     {
       "id": "fear",
       "label": "fear",
-      "aliases": ["afraid", "scared", "worried", "anxious"],
-      "keywords": ["panic", "threat", "unsafe", "pressure"],
+      "aliases": ["afraid", "worried", "anxious"],
+      "keywords": ["panic", "unsafe", "threat", "scared"],
       "negations": ["not", "never", "no"],
       "weight": 1.0
     },
     {
-      "id": "disgust",
-      "label": "disgust",
-      "aliases": ["disgusted", "repulsed"],
-      "keywords": ["gross", "nasty", "revolting", "sickened"],
+      "id": "calm",
+      "label": "calm",
+      "aliases": ["relaxed", "peaceful", "fine"],
+      "keywords": ["okay", "stable", "quiet", "calm"],
       "negations": ["not", "never", "no"],
-      "weight": 1.0
-    },
-    {
-      "id": "surprise",
-      "label": "surprise",
-      "aliases": ["surprised", "shocked", "amazed"],
-      "keywords": ["unexpected", "suddenly", "wow", "astonished"],
-      "negations": ["not", "never", "no"],
-      "weight": 0.95
+      "weight": 0.9
     }
   ],
   "confidence": {
@@ -58,7 +50,7 @@
       "base": 0.2,
       "per_keyword_hit": 0.16,
       "per_alias_hit": 0.2,
-      "per_intensifier_hit": 0.10,
+      "per_intensifier_hit": 0.08,
       "intensifiers": ["really", "very", "so", "extremely"],
       "ambiguity_penalty": 0.22,
       "negation_penalty": 0.3,

@@ -1,0 +1,34 @@
+Tu es un expert en documentation logicielle, open source et prompt engineering.
+Ta tâche est de rédiger un prompt clair, structuré et optimisé destiné à un modèle de langage afin qu’il génère un README.md de haute qualité pour un projet logiciel.
+Le prompt doit suivre les bonnes pratiques du prompt engineering :
+- instructions claires et non ambiguës
+- structuration logique des informations
+- définition explicite du rôle du modèle
+- indication du format de sortie attendu
+- décomposition des tâches si nécessaire
+Le prompt doit également respecter les bonnes pratiques de documentation logicielle :
+- expliquer clairement le projet
+- faciliter la compréhension pour les nouveaux utilisateurs
+- permettre une installation et une utilisation rapides
+- fournir une documentation maintenable
+Le prompt doit demander au modèle de générer un README structuré en Markdown incluant au minimum les sections suivantes :
+- Titre du projet
+- Description
+- Fonctionnalités principales
+- Technologies utilisées
+- Installation
+- Utilisation
+- Structure du projet
+- Exemples d’utilisation
+Le prompt doit aussi demander :
+- un ton clair et professionnel
+- une bonne lisibilité
+- l’utilisation correcte de Markdown
+Structure le prompt final avec des sections comme :
+- Rôle
+- Contexte
+- Objectif
+- Informations d’entrée
+- Instructions
+- Format de sortie attendu
+Fournis uniquement le prompt final prêt à être utilisé.

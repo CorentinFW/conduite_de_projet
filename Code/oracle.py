@@ -39,6 +39,8 @@ class CalibrationConfig:
     base: float
     per_keyword_hit: float
     per_alias_hit: float
+    per_intensifier_hit: float
+    intensifiers: Tuple[str, ...]
     ambiguity_penalty: float
     negation_penalty: float
     max_emotions: int
@@ -160,6 +162,11 @@ class ConfigLoader:
                 calibration_raw.get("per_alias_hit", 0.20),
                 "calibration.per_alias_hit",
             ),
+            per_intensifier_hit=ConfigLoader._as_float(
+                calibration_raw.get("per_intensifier_hit", 0.0),
+                "calibration.per_intensifier_hit",
+            ),
+            intensifiers=ConfigLoader._as_string_tuple(calibration_raw.get("intensifiers", [])),
             ambiguity_penalty=ConfigLoader._as_float(
                 calibration_raw.get("ambiguity_penalty", 0.25),
                 "calibration.ambiguity_penalty",
@@ -262,6 +269,7 @@ class EmotionScorer:
         for emotion in self._config.emotions:
             matched_keywords = self._match_terms(normalized_text, emotion.keywords)
             matched_aliases = self._match_terms(normalized_text, emotion.aliases)
+            matched_intensifiers = self._match_terms(normalized_text, calibration.intensifiers)
             negation_detected = self._normalizer.has_negation(normalized_text, emotion.negations)
 
             hit_count = len(matched_keywords) + len(matched_aliases)
@@ -272,6 +280,7 @@ class EmotionScorer:
                 calibration.base
                 + len(matched_keywords) * calibration.per_keyword_hit
                 + len(matched_aliases) * calibration.per_alias_hit
+                + len(matched_intensifiers) * calibration.per_intensifier_hit
             )
             weighted_score = base_score * emotion.weight
             if negation_detected:
@@ -287,6 +296,7 @@ class EmotionScorer:
                     "evidence": {
                         "matched_keywords": matched_keywords,
                         "matched_aliases": matched_aliases,
+                        "matched_intensifiers": matched_intensifiers,
                         "negation_detected": negation_detected,
                     },
                 }
@@ -402,6 +412,7 @@ class Oracle:
             "evidence": {
                 "matched_keywords": [],
                 "matched_aliases": [],
+                "matched_intensifiers": [],
                 "negation_detected": False,
             },
         }

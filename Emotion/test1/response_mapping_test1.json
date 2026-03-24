@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "confidence_levels": ["low", "medium", "high"],
+  "confidence_thresholds": {
+    "low_lt": 0.4,
+    "medium_lt": 0.7
+  },
+  "responses": {
+    "joy": {
+      "low": "I think I sense some positive energy. Can you tell me more?",
+      "medium": "That sounds good. I am glad to hear it.",
+      "high": "Great news. I am really happy for you."
+    },
+    "sadness": {
+      "low": "I might be missing part of it. Could you clarify how you feel?",
+      "medium": "I am here with you. Do you want to talk about what hurts?",
+      "high": "I am sorry you are going through this. I am here to listen."
+    },
+    "anger": {
+      "low": "I may not fully understand yet. Can you clarify what is frustrating?",
+      "medium": "I can hear tension. Let us slow down and take a breath.",
+      "high": "Let us pause and try to lower the tension step by step."
+    },
+    "fear": {
+      "low": "I am not fully sure yet. Can you describe what worries you?",
+      "medium": "That sounds stressful. We can break it down together.",
+      "high": "You are not alone. I am here to support you right now."
+    },
+    "calm": {
+      "low": "You seem relatively calm. Want to add more details?",
+      "medium": "Glad to hear you are feeling steady.",
+      "high": "Great, you sound very calm and grounded."
+    },
+    "unknown": {
+      "low": "Could you clarify what you are feeling?",
+      "medium": "Could you clarify what you are feeling?",
+      "high": "Could you clarify what you are feeling?"
+    }
+  },
+  "defaults": {
+    "emotion_id": "unknown",
+    "confidence_level": "medium",
+    "empty_input_response": "I did not receive any text. Could you rephrase?"
+  }
+}
