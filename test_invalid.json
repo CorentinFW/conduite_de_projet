@@ -1,0 +1,14 @@
+[
+  {
+    "emotion": "happiness",
+    "confidence": "high"
+  },
+  {
+    "emotion": "sadness",
+    "confidence": "very_high"
+  },
+  {
+    "emotion": "anger",
+    "confidence": "medium"
+  }
+]

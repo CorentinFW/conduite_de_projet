@@ -1,0 +1,5 @@
+{"user_text":"I need help","emotion":"sadness","confidence":"high"}
+{"user_text":"Still sad","emotion":"sadness","confidence":"medium"}
+{"user_text":"I'm angry now","emotion":"anger","confidence":"high"}
+{"user_text":"Still angry","emotion":"anger","confidence":"medium"}
+{"user_text":"Fine whatever","emotion":"disgust","confidence":"low"}
